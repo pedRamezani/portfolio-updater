@@ -7,4 +7,4 @@ jobs:
   Update-Portfolio-By-Running-Netlify-Build:
     runs-on: ubuntu-latest
     steps:
-      - run: curl -X POST -d '{}' https://api.netlify.com/build_hooks/{{ secrets.NETLIFY_HOOK_ID }}
+      - run: curl -X POST -d '{}' https://api.netlify.com/build_hooks/${{ secrets.NETLIFY_HOOK_ID }}
