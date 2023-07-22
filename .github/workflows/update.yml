@@ -3,6 +3,7 @@ run-name: ${{ github.actor }} is running Netlify build!
 on: 
   schedule:
     - cron: '0 */3 * * *'
+    - cron: '30 1-23/3 * * *'
 jobs:
   Update-Portfolio-By-Running-Netlify-Build:
     runs-on: ubuntu-latest
