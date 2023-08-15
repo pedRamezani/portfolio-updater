@@ -2,10 +2,10 @@ name: Portfolio Updater
 run-name: ${{ github.actor }} is running Netlify build!
 on: 
   schedule:
-    - cron: '0 */3 * * *'
-    - cron: '30 1-23/3 * * *'
+    - cron: '*/12 * * * *'
+  workflow_dispatch:
 jobs:
-  Update-Portfolio-By-Running-Netlify-Build:
+  Update-Portfolio:
     runs-on: ubuntu-latest
     steps:
-      - run: curl -X POST -d '{}' https://api.netlify.com/build_hooks/${{ secrets.NETLIFY_HOOK_ID }}
+      - run: curl -X POST -d '{}' ${{ secrets.BUILD_HOOK_VERCEL }}
