@@ -1,5 +1,5 @@
 name: Portfolio Updater
-run-name: ${{ github.actor }} is running Netlify build!
+run-name: ${{ github.actor }} is running Vercek build and deploy!
 on: 
   schedule:
     - cron: '*/12 * * * *'
